@@ -22,24 +22,28 @@ class MainActivity : AppCompatActivity() {
                 nosScore++
                 tvNosCounter.text = nosScore.toString()
                 verificarMaoDeOnze()
+                verificarVencedor()
             }
 
             btNosIncrementar3.setOnClickListener {
                 nosScore += 3
                 tvNosCounter.text = nosScore.toString()
                 verificarMaoDeOnze()
+                verificarVencedor()
             }
 
             btElesIncrementar1.setOnClickListener {
                 elesScore++
                 tvElesCounter.text = elesScore.toString()
                 verificarMaoDeOnze()
+                verificarVencedor()
             }
 
             btElesIncrementar3.setOnClickListener {
                 elesScore += 3
                 tvElesCounter.text = elesScore.toString()
                 verificarMaoDeOnze()
+                verificarVencedor()
             }
 
             btReiniciar.setOnClickListener {
@@ -63,6 +67,19 @@ class MainActivity : AppCompatActivity() {
                 }
                 else -> {
                     tvStatus.text = ""
+                }
+            }
+        }
+    }
+
+    private fun verificarVencedor() {
+        with(activityMainBinding) {
+            when {
+                nosScore >= 12 -> {
+                    tvStatus.text = "Nós venceram!"
+                }
+                elesScore >= 12 -> {
+                    tvStatus.text = "Eles venceram!"
                 }
             }
         }
