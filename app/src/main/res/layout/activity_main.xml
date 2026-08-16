@@ -56,7 +56,6 @@
         app:layout_constraintEnd_toStartOf="@id/bt_eles_incrementar3"
         app:layout_constraintBottom_toTopOf="@id/bt_reiniciar" />
 
-    <!-- Coluna Eles -->
     <TextView
         android:id="@+id/tv_eles_label"
         android:layout_width="0dp"
@@ -105,7 +104,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bt_reiniciar" />
 
-    <!-- Botão de reiniciar (único, afeta ambas equipes) -->
     <Button
         android:id="@+id/bt_reiniciar"
         android:layout_width="0dp"
