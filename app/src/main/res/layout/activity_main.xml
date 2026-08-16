@@ -7,13 +7,115 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Coluna Nós -->
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_nos_label"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Nós"
+        android:textSize="24sp"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@id/tv_eles_label"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/tv_nos_counter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="48sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_eles_counter"
+        app:layout_constraintTop_toBottomOf="@id/tv_nos_label"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/bt_nos_incrementar1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/bt_eles_incrementar1"
+        app:layout_constraintBottom_toTopOf="@id/bt_nos_incrementar3" />
+
+    <Button
+        android:id="@+id/bt_nos_incrementar3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+3"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/bt_eles_incrementar3"
+        app:layout_constraintBottom_toTopOf="@id/bt_reiniciar" />
+
+    <!-- Coluna Eles -->
+    <TextView
+        android:id="@+id/tv_eles_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Eles"
+        android:textSize="24sp"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/tv_nos_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/tv_eles_counter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="48sp"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/tv_nos_counter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_eles_label"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/bt_eles_incrementar1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintStart_toEndOf="@id/bt_nos_incrementar1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bt_eles_incrementar3" />
+
+    <Button
+        android:id="@+id/bt_eles_incrementar3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+3"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintStart_toEndOf="@id/bt_nos_incrementar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bt_reiniciar" />
+
+    <!-- Botão de reiniciar (único, afeta ambas equipes) -->
+    <Button
+        android:id="@+id/bt_reiniciar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Reiniciar"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
